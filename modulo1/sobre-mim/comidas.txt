@@ -1,0 +1,10 @@
+1 - nhoque
+2 - macarrão
+3 - arroz e feijão
+4 - salada
+5 - peixe
+6 - charuto
+7 - qibe
+8 - strogonoff
+9 - frutas
+10 - bolo de espinafre
