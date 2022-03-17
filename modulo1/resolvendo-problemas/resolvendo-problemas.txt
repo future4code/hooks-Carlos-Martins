@@ -1,0 +1,25 @@
+1) Atenção ao enunciado
+O que o código deve fazer.Ler com atenção e separar os detalhes para construir a lógica.Identificar informações únicas que farão a diferença.
+
+2) Retirar informações relevantes
+Separar palavras chaves, os substantivos, como nome de variáveis. Os verbos criarão funções,pois reprensentam as ações no código.Usarei condiçôes(if else,switch e etc) para a existência do código.
+
+3)Pensar nas entradas e saídas
+
+Como e quais dados recebidos? Criar função com entrada e saída pensadas.Quais as possíveis respostas.
+
+4) Fazer um esquema visual
+
+Crie exemplos de situações antes.Monte diagramas com a lógica do código.Pode montar a lógica em papel mesmno no começo.Pense nos possíveis cenários e coloque inputs e outputs.
+
+5) Criar um código feio
+
+Coloque no papel todas possíveis soluçôes.Escolha as melhores e ponha na sua IDE.Teste cada uma das soluções até obter uma resposta como solicitada no enunciado.
+
+6) Testar: Força-Bruta
+
+Solução óbvia e pouca performática. Transcrever para a linguagem de programação desejada. 
+
+7) Refatorar
+
+Depois de conseguir fazer o programa funcionar, vamos melhorar o nome das variáveis e deixar o código mais legível. Otimizar o código também é fetio nesta etapa.
