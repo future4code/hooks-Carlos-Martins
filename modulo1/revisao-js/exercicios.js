@@ -5,6 +5,7 @@
 
 // EXERCÍCIO 01
 function retornaTamanhoArray(array) {
+
    return array.length
 }
 
@@ -29,6 +30,13 @@ function retornaNumerosPares(array) {
     return arrayPares
 }
 
+  
+
+// EXERCÍCIO 04
+function retornaNumerosPares(array) {
+  
+}
+
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
     let arrayParesElevadosDois = []
@@ -42,6 +50,7 @@ function retornaNumerosParesElevadosADois(array) {
 
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
+
      let maior = -Infinity
      for(let i = 0; i < array.length; i++) {
          if( array[i] > maior){
@@ -99,18 +108,15 @@ function classificaTriangulo(ladoA, ladoB, ladoC) {
 
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
-
      let Array = []
      array.sort((a,b) => a - b)
      Array.push(array[lenght-2])
      Array.push(array[1])
-
     return Array
 }
 
 // EXERCÍCIO 11
 function retornaChamadaDeFilme(filme) {
-  
     return `Venha assistir ao filme ${filme.nome}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${filme.atores[0]}, ${filme.atores[1]}, ${filme.atores[2]}, ${filme.atores[3]}.`
 }
 
@@ -120,7 +126,6 @@ function retornaPessoaAnonimizada(pessoa) {
         ...pessoa,
         nome: "ANÔNIMO"
       }
-   
 }
 
 // EXERCÍCIO 13A
@@ -131,36 +136,30 @@ function retornaPessoasAutorizadas(pessoas) {
       pessoasPermitidas.push(pessoa)
     }
   }
-  return pessoasPermitidas
-   
+  return pessoasPermitidas  
 }
 
 // EXERCÍCIO 13B
 function retornaPessoasNaoAutorizadas(pessoas) {
-    let pessoasNaoPermitidas = []
+  let pessoasNaoPermitidas = []
   for (let pessoa of pessoas) {
     if (pessoa.altura < 1.5 || pessoa.idade <= 14 || pessoa.idade >= 60) {
       pessoasNaoPermitidas.push(pessoa)
     }
   }
-  return pessoasNaoPermitidas
-  
+  return pessoasNaoPermitidas 
 }
 
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) {
- 
-
 }
 
 // EXERCÍCIO 15A
 function retornaArrayOrdenadoAlfabeticamente(consultas) {
-    
-  
+ 
 }
 
 // EXERCÍCIO 15B
 function retornaArrayOrdenadoPorData(consultas) {
-   
-   
+  
 }
