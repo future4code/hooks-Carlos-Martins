@@ -69,6 +69,7 @@ div img {
 #container-de-descricao {
     background-color: #2274a5;
     color: white;
+    padding-top: 100px;
 }
 
 #container-de-descricao>ol {
@@ -77,6 +78,8 @@ div img {
 
 #container-para-comprar {
     background-color: #e7eb90;
+   
+    
 }
 
 #container-para-comprar>p {
