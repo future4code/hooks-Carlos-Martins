@@ -140,3 +140,7 @@ td > img {
 #back-button:hover {
     background-color: #635a3d
 }
+
+.container-do-voltar {
+    text-align: center;
+}
