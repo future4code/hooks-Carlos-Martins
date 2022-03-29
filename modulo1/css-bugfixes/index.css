@@ -75,7 +75,8 @@ div img {
 }
 
 #container-de-descricao>ol {
-    padding: 15px 0px;
+    padding: 15px 15px;
+    list-style-position: inside
 }
 
 #container-para-comprar {
