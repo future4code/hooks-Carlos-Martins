@@ -78,6 +78,7 @@ div img {
 
 #container-para-comprar {
     background-color: #e7eb90;
+    text-align: center;
    
     
 }
@@ -119,6 +120,15 @@ td button {
 
 td > img {
     width: 70px;
+}
+
+td button:hover {
+    background-color: #695e2a;
+    cursor: pointer;
+}
+
+td button:active {
+    color: white;
 }
 
 .container-do-search {
