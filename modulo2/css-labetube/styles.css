@@ -53,6 +53,18 @@ main{
    
 }
 
+@media screen and (max-width: 480px){
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .video-card{
+        width:200px;
+    }
+    
+}
+
 body{
     min-height: 100vh;
     display:grid;
