@@ -15,7 +15,7 @@ const AppContainer = styled.div`
 
 const MsgContainer = styled.div`
   flex-grow: 1;
-  padding:0.9em 0.8em;
+  padding:30px
   display: flex;
   flex-direction: column-reverse ;
 
