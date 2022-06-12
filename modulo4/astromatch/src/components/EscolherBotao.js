@@ -2,19 +2,16 @@ import React from "react";
 import styled from "styled-components"
 
 const EscolherBotaoContainer = styled.div`
- display: flex;
- justify-content: space-around ;
-
+  display:flex ;
+  justify-content:space-around ;
 `
-
-
 
 function EscolherBotao(props){
 
     return(
         <EscolherBotaoContainer>
-            <button onClick={props.onClickNaoCurtir()}>não curtir</button>
-            <button onClick={props.onClickCurtir()}>curtir</button>
+            <button onClick={props.onClickDiscurtir}>Discurtir</button>
+            <button onClick ={props.onClickCurtir}>Curtir</button>
         </EscolherBotaoContainer>
     )
 }

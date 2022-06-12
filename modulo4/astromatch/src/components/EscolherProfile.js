@@ -1,59 +1,51 @@
-import  axios  from "axios";
 import React, { useEffect, useState } from "react";
 import CartaoProfile from "./CartaoProfile";
 import EscolherBotao from "./EscolherBotao";
+import axios from "axios";
 
+function EscolherProfile() {
+    const[perfilParaEscolher,setPerfilParaEscolher] = useState({})
 
-
-
-
-
-function EscolherProfile(){
-
-    const [perfilParaSerEscolhido,setPerfilParaSerEscolhido] = useState({})
-
-    const getEscolherProfile = () => {
-        axios.get('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/guto/person').then((response)=>{
-             setPerfilParaSerEscolhido(response.data.profile)
-          })
+    const getPerfilParaEscolher = () => {
+        axios.get('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:guto/person').then((response)=>{
+            console.log(response.data.profile)
+            setPerfilParaEscolher(response.data.profile)     
+         })
     }
-    
+   
 
-      useEffect(()=>{
-         getEscolherProfile() 
-      },[])
+    useEffect(()=>{
+       getPerfilParaEscolher()
+    },[])
 
-    const onClickNaoCurtir = () => {
+    const onClickDiscurtir = () => {
         const body = {
             choice: false,
-            id: perfilParaSerEscolhido.id
+            id: perfilParaEscolher.id
         }
-        axios.post('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/guto/choose-person',body).then((response)=>{
-           console.log(response)
-           getEscolherProfile() 
-        }) 
+        axios.post('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:guto/choose-person',body).then((response)=>{
+            console.log(response)
+            getPerfilParaEscolher()
+        })
     }
 
     const onClickCurtir = () => {
         const body = {
             choice: true,
-            id: perfilParaSerEscolhido.id
+            id: perfilParaEscolher.id
         }
-        axios.post('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/guto/choose-person',body).then((response)=>{
+        axios.post('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:guto/choose-person',body).then((response)=>{
             console.log(response)
-           getEscolherProfile()
-
+            getPerfilParaEscolher()
         })
     }
-    
-
-  return(
-      <div>
-          <CartaoProfile profile = {perfilParaSerEscolhido}/>
-          <EscolherBotao onClickNaoCurtir={onClickNaoCurtir} onClickCurtir={onClickCurtir} />
-      </div>
-  )
-
+  
+     return(
+        <div>
+            <CartaoProfile profile={perfilParaEscolher}/>
+            <EscolherBotao onClickDiscurtir={onClickDiscurtir} onClickCurtir={onClickCurtir}/>
+        </div>
+    )
 }
 
 export default EscolherProfile

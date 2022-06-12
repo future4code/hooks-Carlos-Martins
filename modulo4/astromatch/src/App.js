@@ -1,7 +1,6 @@
-
-import './App.css';
-import Main from './components/Main';
-import Reset from './components/Reset';
+import React from "react";
+import Main from "./components/Main";
+import Reset from "./components/Reset";
 
 function App() {
   return (

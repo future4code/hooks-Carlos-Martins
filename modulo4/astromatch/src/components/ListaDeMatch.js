@@ -1,32 +1,28 @@
-import React, { useEffect , useState } from "react"
-import ItemMatchLista from "./ItemMatchLista"
+import React, { useEffect, useState } from "react";
+import ItemMatchList from "./ItemMatchList";
 import styled from "styled-components"
-import axios from "axios"
+import axios from "axios";
 
 const ListaDeMatchContainer = styled.div`
- padding: 8px;
+ padding: 10px;
+ 
 
 `
-
-
-function ListaDeMatch() {
-
+function ListaDeMatch(){
     const[matches,setMatches] = useState([])
 
-   
-
-      useEffect(()=>{
-        axios.get('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/guto/matches').then((response)=>{
+    useEffect(()=>{
+        axios.get('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:guto/matches').then((response)=>{
+            console.log(response.data.matches)
             setMatches(response.data.matches)
         })
-      },[])
-
+    },[])
     return(
-        <ListaDeMatchContainer >
+        <ListaDeMatchContainer>
             {matches.map((profile)=>{
-                return <ItemMatchLista profile={profile}/>
+                return <ItemMatchList profile = {profile}/>
             })}
-        </ListaDeMatchContainer >
+        </ListaDeMatchContainer>
     )
 }
 
