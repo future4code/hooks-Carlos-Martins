@@ -3,7 +3,10 @@ import React from "react"
 function LoginPage(){
     return(
     <div>
-        Login
+        <h1 align={'center'}>Login</h1>
+        <form>
+            <label for ="Email">Email</label>
+        </form>
     </div>
     )
 }
