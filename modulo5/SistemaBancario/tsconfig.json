@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+   
+    "target": "es6",                                  
+    "module": "commonjs",                               
+    "rootDir": "./src",                                  
+    "outDir": "./build",
+    "removeComments": true,
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
+  }
+}
