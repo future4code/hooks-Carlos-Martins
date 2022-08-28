@@ -11,6 +11,13 @@ app.post("/users/criar",(req:Request,res:Response)=>{
         const [dia,mes,ano] = DataDeNascimento.split('/')
         const dataDeNascimento: Date = new Date(`${dia}/${mes}/${ano}`)
 
+        const idade :number = Date.now() - dataDeNascimento.getTime()
+        const Idade: number = idade / 1000 / 60 / 60 / 24 / 365 
+
+        if(Idade < 18 ){
+            res.send("Conta proibida por pessoa ser menor de idade")
+        }
+
         contas.push({
             nome,
             CPF,
