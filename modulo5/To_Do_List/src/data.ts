@@ -4,7 +4,7 @@ const criarTabelaUsuarios = async () => {
     try {
         await connection.raw(`
         CREATE TABLE TodoListUser (
-        id VARCHAR(255) PRIMARY KEY, 
+        id BIGINT PRIMARY KEY, 
         name VARCHAR(255) NULL, 
         nickname VARCHAR(255) UNIQUE NOT NULL, 
         email VARCHAR(255) UNIQUE NOT NULL
