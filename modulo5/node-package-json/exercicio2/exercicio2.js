@@ -8,16 +8,16 @@ let resultado = "Resultado: "
 
 switch (operacao) {
   case "soma":
-    resultado = primeiroNum + segundoNum
+    resultado += primeiroNum + segundoNum
     break
   case "subtracao":
-    resultado = primeiroNum - segundoNum
+    resultado += primeiroNum - segundoNum
     break
   case "multiplicacao":
-    resultado = primeiroNum * segundoNum
+    resultado += primeiroNum * segundoNum
     break
   case "divisao":
-    resultado = (primeiroNum / segundoNum).toFixed(1)
+    resultado += (primeiroNum / segundoNum).toFixed(1)
     break
   default:
     resultado = "operacao invalida"
