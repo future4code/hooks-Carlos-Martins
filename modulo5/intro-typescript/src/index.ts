@@ -1,4 +1,4 @@
-/* 
+ 
 
 const a: number = 6
 const b: number = 8
