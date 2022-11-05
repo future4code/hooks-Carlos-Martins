@@ -1,7 +1,7 @@
 import express from 'express'
 import { Request,Response } from 'express';
 import cors from 'cors'
-import { users } from './data';
+import { users,posts } from './data';
 
 const app = express();
 app.use(cors())
@@ -17,4 +17,24 @@ app.get("/", (req: Request, res: Response) => {
 
 app.get("/users",(req:Request,res: Response)=>{
     res.send(users)
+})
+
+app.get("/posts",(req:Request,res: Response)=>{
+    res.send(posts)
+})
+
+app.get("/users/:useId/posts",(req:Request,res:Response)=> {
+    const userId = Number(req.params.userId)
+
+    const result = posts.filter(post => {
+        if(post.userId === userId){
+            return true
+        } else {
+            return false
+        }
+
+    })
+
+    res.send(result)
+    
 })
